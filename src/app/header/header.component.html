@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="col-sm-6 col-xs-12">
+        <a style="cursor: pointer;"><span><img alt="ShoppingCartLogo" src="../../assets/logo.png" /></span></a>
+    </div>      
+    <div class="logo col-sm-6 col-xs-6 navigation">
+        <div class="nav navbar-nav pull-left">          
+            <input  style="margin-top: 10px;margin-left: -90px;;"type="text" [(ngModel)]="inputValue" autocomplete="off" />           
+        </div>        
+        <nav class="nav navbar-nav pull-right">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav" *ngFor="let item of menuItems; let i = index">
+                    <li *ngIf="(i ==0)"><a href="#">{{item.title}}</a></li>
+                    <li *ngIf="(i ==1)"  routerLinkActive="active"  ><a routerLink="/contactus">{{item.title}} &nbsp;&nbsp;<i class="fa fa-address-card"
+                                *ngIf="item.showIcon" style="font-size:12px;color:blue;"></i></a></li>
+                    <li *ngIf="(i ==2)"><a href="#">{{item.title}}&nbsp;&nbsp;<i class="fa fa-facebook-f"
+                                *ngIf="item.showIcon" style="font-size:12px;color:blue;"></i>&nbsp;<i
+                                class="fa fa-twitter" *ngIf="item.showIcon" style="font-size:14px;color:blue;"></i></a>
+                    </li>  
+                    <li *ngIf="(i ==3)"><a href="#">{{item.title}} &nbsp;&nbsp;<i class="fa fa-shopping-cart"
+                        *ngIf="item.showIcon" style="font-size:12px;color:blue;">&nbsp;&nbsp;{{message}}</i></a></li>                 
+                </ul>
+            </div>
+        </nav>
+    </div>    
+</div>
+<div class="bindingValue">       
+    <h2><strong>{{inputValue}}</strong></h2>
+</div>

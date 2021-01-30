@@ -1,0 +1,41 @@
+#buttonallign{
+    display: flex;
+    position: relative;
+}
+
+button{
+    height:30px;
+    width:130px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.itemlist{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.pointer{
+    cursor: pointer;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    outline: 0;
+    min-height: 300px;
+    width: 400px;
+    margin-left: 20%;;
+    justify-content: center;
+}

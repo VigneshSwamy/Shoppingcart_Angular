@@ -1,0 +1,26 @@
+.rating-list li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+  
+  }
+  
+  .rating-list li:hover,
+  .rating-list li:hover ~ li, .rating-list li.selected {
+    color: #110ebb;
+  }
+  
+  .rating-list {
+    display: inline-block;
+    list-style: none;
+  }
+
+  
+.icon{
+    display:inline-block;
+    margin-right:3px;
+    cursor:pointer;
+    color:#ccc;
+}
+.icon:hover{color:#006dcc;}
+.filled {color:#006dcc;}

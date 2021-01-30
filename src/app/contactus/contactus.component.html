@@ -1,0 +1,85 @@
+<br /><br />
+<div class="formdiv">
+  <form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="mainform">
+      <div class="contactform">
+        <label>First Name:</label>
+        <input
+          type="text"
+          placeholder="Enter First Name"
+          formControlName="firstName"
+          required
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+        />
+      </div>
+      <div
+        *ngIf="submitted && f.firstName.errors"
+        style="color: red"
+        class="fstnamevalidator"
+      >
+        <div *ngIf="f.firstName.errors.required">firstName is required</div>
+      </div>
+
+      <br />
+
+      <div class="contactform">
+        <label>Last Name:</label>
+        <input
+          type="text"
+          placeholder="Enter Last Name"
+          formControlName="lastName"
+        />
+      </div>
+      <br />
+
+      <div class="contactform">
+        <label>Email:</label>
+        <input
+          type="email"
+          placeholder="Enter Email Address"
+          formControlName="email"
+          required
+        />        
+      </div>
+       <div *ngIf="submitted && f.email.errors"  style="color: red" class="invalid-feedback emailvalidator">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+      <!-- <div
+        *ngIf="submitted && f.email.errors"
+        style="color: red"
+        class="emailvalidator"
+      >
+        <div *ngIf="f.email.errors.required">provide a valid Email</div>
+      </div> -->
+
+      <br />
+    </div>
+    <br />
+    <div class="queryform">
+      <div formArrayName="aliases">
+        <button (click)="addquery()" class="btn btn-primary">Add Query</button>
+        <br />
+        <br />
+        <div *ngFor="let alias of aliases.controls; let i = index">
+          <div class="contactform">
+            <label>Query :</label>
+            <input type="text" [formControlName]="i" />
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+    <!-- </div> -->
+    <button
+      id="submit"
+      type="button"
+      class="btn btn-primary"
+      (click)="onsubmit()"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+<br />
+<br />

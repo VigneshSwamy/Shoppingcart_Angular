@@ -1,0 +1,103 @@
+  <div class="productdetail">
+    <img class="img1 img-responsive" [src]="selectedproduct.image" alt="carousel2" />
+    <p>
+      <strong>{{ selectedproduct.name }}</strong>
+    </p>
+    <br />
+    <p style="margin-top: -20px">{{ selectedproduct.description }}</p>
+    <br />
+    <app-product-rating
+      [productrating1]="productrating1"
+      [productrating2]="productrating2"
+      [productrating3]="productrating3"
+    ></app-product-rating>
+
+    <ng-container >
+      <p *ngIf="Firstloop">{{ selectedproduct.rating }}</p>
+      <p>{{ changedoutputvalue1 }}</p>
+      <app-starrating
+        setRating="4"
+        max="5"
+        (onRating)="onRating($event)"
+        (chagedvalue)="customFunc($event)"
+      >
+      </app-starrating>
+    </ng-container>  
+    <div>
+      <div id="buttonallign">
+        <button class="btn btn-primary" (click)="onbuynow()">Buy Now</button
+        >&nbsp;&nbsp;&nbsp;
+        <button
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#Review"
+        >
+          User Review
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Review" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+        <strong>Moderate Reviews </strong>
+      </div>
+      <div class="modal-body">
+        <!-- <input type="checkbox" id="Reviews" /> &nbsp;
+        <label style="font-weight: 100" for="Reviews"
+          >Show Accepted Reviews</label> -->
+        <!--   <input type="checkbox" id="showAccReview"  name="showAccReview"  [(ngModel)]="theCheckbox"  data-md-icheck (change)='filterReview($event)'>
+        <label for="showAccReview">Show Accepted Reviews</label>
+        <br />
+        <br />
+
+       <div *ngFor="let option of list">
+          <div class="itemlist">
+             <span id="span-{{ option.id }}">{{ option.name }}</span>           
+            <button
+              id="btn-{{ option.id }}"
+              type="button"
+              class="btn btn-primary"
+              (click)="toggleTodo(option.id)"
+            >
+              Reject Review
+            </button>        
+          <br />
+        </div>
+        <br /><br />
+        <input
+          style="float: left; line-height: 32px"
+          type="text"
+          [(ngModel)]="inputValue"
+        />
+        &nbsp;&nbsp;
+        <button type="button" class="btn btn-primary" (click)="addreviewlist()">
+          Add Review
+        </button> -->
+<input type="checkbox" id="showAccReview"  name="showAccReview"  [(ngModel)]="theCheckbox"  data-md-icheck (change)='filterReview($event)'>
+        <label for="showAccReview">Show Accepted Reviews</label>
+        <div *ngFor="let review of reviews;"  class="rejectReview">
+            <div class="itemlist">
+                <p>{{review}}</p>
+                <button type="button" class="btn btn-primary rejectButton">Reject Review</button>        
+            </div>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="addReview">
+        <input type="text" #newReview (keyup.enter)="addReview(newReview.value); newReview.value=''" (blur)="addReview(newReview.value); newReview.value='' " name="review" >
+        <button type="button" (click)="addReview(newReview.value)" class="btn btn-primary" >Add Review</button>
+        </div>
+        <br>
+        <br>
+        
+      </div>     
+    </div>
+  </div>
+</div>
+<br><br>

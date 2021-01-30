@@ -1,0 +1,58 @@
+.formdiv{
+    display:flex;
+    height: 100%;
+    /* width:250px; */
+     margin-top:50px; 
+    /* margin-left: 400px;  */
+    background-color:white;   
+    border: solid 1px grey;
+    width: 500px; 
+    position: relative;
+    margin:0 auto;
+    
+}
+@media only screen and (max-width: 375px){
+    .formdiv { width: 90%; }
+}
+
+.form{
+    margin-top: 20px;
+    margin-bottom: 20px;   
+   
+}
+.mainform{
+    margin-left:40px;
+     border-radius: 10px;
+    border: solid 1px grey;
+    padding:10px 100px 10px 10px;
+}
+.queryform{
+    margin-left:40px;
+     border-radius: 10px;
+    border: solid 1px grey;
+    padding:10px 100px 10px 10px;
+}
+.contactform{
+    display: flex;
+    justify-content: space-between;   
+    /* flex-direction: row; */
+}
+/* .fstnamevalidator{
+      margin-top:-20px;
+       
+}
+.emailvalidator{
+     display: flex; 
+       
+} */
+/* label{
+ margin-left: 20px;
+}*/
+input{
+ margin-left: 50px;
+} 
+
+#submit{
+    margin-left:50px;
+    margin-top:20px;
+}

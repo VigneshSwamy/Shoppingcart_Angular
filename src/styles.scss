@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container{
+    margin-top:40px;
+}
+
+.navigation {
+    position: relative;
+    float: right;
+}
+.navbar {
+    left: 100px!important;
+    
+  }
+
+  @media (min-width: 768px) {
+  .navbar > .container-fluid .navbar-brand {
+    //   Left: 100px;
+    width:100%;
+  }
+}
+
+.carousel2 {
+    width: 110%;
+    height: 40%;
+    margin-left: -10%;
+    position: absolute;
+}
+
+.img1 {
+    /* position: relative;   */
+    height: 200px;
+    width: 300px;
+    display: flex;
+    bottom:100px;
+   
+}
+
+.img2 {
+    /* position: relative;     */
+    height: 200px;
+    width: 300px;
+    display: flex;
+}
+
+.img3 {
+    /* position: relative; */
+    height: 200px;
+    width: 300px;
+    display: flex;
+}
+
+.zoom1:hover {
+    transform: scale(1.2);
+    // background-color:#e6e3e3;
+
+}
+  .rejectReview p {
+    width: 60%;
+    position: relative;
+    float: left;
+}
+.rejectReview .btn, .addReview .btn {
+    margin-left: 10%;
+    margin-top: 0px;
+}
+.rejReview{
+    display: none;
+}
+
+ .addReview, .rejectReview {
+    margin-top: 10px;
+    display: flow-root;
+}
+.strike{
+    text-decoration: line-through;
+  }
+
+.product {    
+	border: 1px solid lightgray;
+    padding-bottom: 10px;
+    height:45%;
+    width:65%;
+}
+.product div {
+    width: 97%;
+    margin-left: 5px;
+}
